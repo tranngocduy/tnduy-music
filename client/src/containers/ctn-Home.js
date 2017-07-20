@@ -14,7 +14,7 @@ class CTNHome extends Component {
     }
 
     render() {
-        const { data, selectedMusic, selected, pauseMusic } = this.props;
+        const { data, selectedMusic, selected, pauseMusic, getTextChat } = this.props;
         return (
             <div className="row">
                 {data.isLoading && <LinearProgress mode="indeterminate" />}       
@@ -31,7 +31,8 @@ class CTNHome extends Component {
 
 const mapStateToProps = (state) => ({
     data: state.rdfetchHomeList,
-    selected: state.rdSelectedMusic
+    selected: state.rdSelectedMusic,
+    getTextChat: state.rdGetTextChat
 }) 
 
 export default connect(mapStateToProps, { fetchHomeList, selectedMusic })(CTNHome);

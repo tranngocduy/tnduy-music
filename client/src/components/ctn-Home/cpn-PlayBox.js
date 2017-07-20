@@ -39,7 +39,6 @@ class PlayBox extends Component {
 
     render() {
         const { selected: { isLoading, play } } = this.state;
-        console.log(12121, play)
         let style = {
             animationName: 'rotate',
             animationTimingFunction: 'linear',
